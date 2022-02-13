@@ -3,9 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FAV -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+    <link rel="manifest" href="/fav/site.webmanifest">
+    <link rel="mask-icon" href="/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/fav/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/fav/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preload" href="./assets/img/Logo-dark.svg" as="image">
+    <link rel="preload" href="./assets/img/sections/header/header-game-name.svg" as="image">
+    <link rel="preload" href="./assets/img/svg/swords-icon.svg" as="image">
+
+    <meta name="description" content="#">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
+
     <link rel="stylesheet" href="./assets/css/style.css" />
+
     <script defer src="./assets/js/main.js"></script>
+
     <title>Near dungeon</title>
   </head>
   <body>
@@ -81,9 +102,11 @@
         </section>
 
         <section id="features" class="contents">
-          <p class="contents__item contents__build" data-text="Build"></p>
-          <p class="contents__item contents__fight" data-text="Fight"></p>
-          <p class="contents__item" data-text="Evolve"></p>
+          <ul class="contents__list">
+            <li class="contents__item contents__build" data-text="Build"></li>
+            <li class="contents__item contents__fight" data-text="Fight"></li>
+            <li class="contents__item" data-text="Evolve"></li>
+          </ul>
         </section>
 
         <div class="container">
@@ -158,7 +181,7 @@
                 loading="lazy"
               />
               <p class="involvement__item-text">
-                Anybody can build a new quest, a new<br />item, or even a new building
+                Anybody can build a new quest, a new item, or even a new building
               </p>
             </li>
 
@@ -170,7 +193,7 @@
                 loading="lazy"
               />
               <p class="involvement__item-text">
-                Vote and choose the best development<br />ideas to deliver it into the game
+                Vote and choose the best development ideas to deliver it into the game
               </p>
             </li>
 
@@ -181,7 +204,7 @@
                 class="involvement__item-img"
                 loading="lazy"
               />
-              <p class="involvement__item-text">Own everything that you get,<br />trade or sell it</p>
+              <p class="involvement__item-text">Own everything that you get, trade or sell it</p>
             </li>
           </ul>
         </section>
@@ -311,7 +334,7 @@
                 <p>© 2022 NEAR DUNGEON</p>
               </li>
 
-              <li class="legal__item">
+              <li class="legal__item legal__item--privacy">
                 <a href="#" class="legal__item-link" target="_blank">PRIVACY POLICY</a>
               </li>
 
