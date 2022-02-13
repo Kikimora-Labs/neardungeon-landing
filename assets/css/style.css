@@ -1,0 +1,911 @@
+/* *** FONTS *** */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Light.woff") format("woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: 'Montserrat';
+  overflow-x: hidden;
+}
+
+p,
+h1, h2 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* *** COMMON *** */
+
+.flex-column {
+  display: flex;
+  flex-flow: column;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sect {
+  max-width: 1160px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.sect__title {
+  margin-bottom: 80px;
+  font: 500 70px/140% 'Montserrat';
+  color: #14132B;
+}
+
+.icon-swords {
+  display: inline-block;
+  width: 31px;
+  height: 31px;
+  background: url('../img/svg/swords-icon.svg') no-repeat center/contain;
+}
+
+.logo {
+  width: 194px;
+  height: 66px;
+  object-fit: contain;
+  transition: opacity .2s;
+}
+
+.logo:hover {
+  opacity: .5;
+}
+
+.play-link-prim {
+  padding: 18px 25px;
+  border-radius: 30px;
+  font: 800 14px/1 'Montserrat';
+  border: 2px solid #F84444;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  transition: background .2s, color .2s;
+  color: #fff;
+  background: #F84444;
+}
+
+.play-link-prim:hover {
+  color: #F84444;
+  background-color: transparent;  
+}
+
+.play-link-v2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform .2s;
+  color: #fff;
+  max-width: 215px;
+  z-index: 1;
+}
+
+/* .play-link-v2:hover {
+  transform: skew(10deg);
+}
+
+.play-link-v2:hover .play-link-v2__icon,
+.play-link-v2:hover .play-link-v2__text {
+  transform: skew(-10deg);
+}
+
+.play-link-v2:hover .play-link-v2__icon::after {
+  opacity: 0;
+  right: -50px;
+} */
+
+.play-link-v2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F84444;
+  transform: skew(-10deg, 0);
+  border-radius: 15px;
+  z-index: -1;
+}
+
+.play-link-v2__icon {
+  position: relative;
+  padding: 15px 20px;
+  transition: transform .2s;
+}
+
+.play-link-v2__icon::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+  right: 0;
+  transform: skew(-10deg, 0);
+  transition: opacity .4s, right .2s;
+}
+
+.play-link-v2__text {
+  padding: 15px 25px;
+  text-transform: uppercase;
+  font: 800 14px/1 'Montserrat';  
+  letter-spacing: .1em;
+  transition: transform .2s;
+}
+
+/* *** HEADER *** */
+
+.header {
+  display: flex;
+  flex-flow: column;
+  padding-top: 30px;
+  padding-bottom: 500px;
+  margin-bottom: -135px;
+  position: relative;
+  will-change: padding;
+}
+
+.header__title {
+  max-width: .1px;
+  max-height: .1px;
+  opacity: 0;
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__bottom {
+  display: flex;
+  flex-flow: column;
+  padding-top: 115px;
+}
+
+.header__descr {
+  max-width: 550px;
+  width: 100%;
+  margin: 40px auto 50px;
+  font: 500 23px/174% 'Montserrat';
+  text-align: center;  
+}
+
+.header__bottom-link {
+  margin: 0 auto;
+}
+
+.game-name {
+  max-width: 850px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 23%;
+}
+
+.game-name__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* *** HEADER CARDS */
+
+.header-card {
+  position: absolute;
+  will-change: bottom;
+  z-index: 2;
+}
+
+#game-card-1 {
+  bottom: 5%;
+  left: -5%;
+  width: 25%;
+}
+
+#game-card-2 {
+  bottom: -35%;
+  left: 30%;
+  width: 35%;
+}
+
+#game-card-3 {
+  bottom: 25%;
+  right: 5%;
+  width: 20%;
+}
+
+#game-card-4 {
+  bottom: 5%;
+  right: -5%;
+  width: 20%;
+  z-index: -1;
+}
+
+/* *** NAV *** */
+
+.nav {
+  font: 500 17px/110% 'Montserrat';
+  color: #0A1335;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  margin-right: 60px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__item:hover:not(.active) {
+  opacity: .5;
+}
+
+.nav__item.active {
+  font-weight: 700;
+  position: relative;
+}
+
+.nav__item.active::before {
+  content: '';
+  width: 38px;
+  height: 42px;
+  position: absolute;
+  top: -10px;
+  left: 40%;
+  transform: translateX(-50%);
+  background: url('../img/svg/red-piece-figure.svg') no-repeat center/contain;
+  z-index: -1;
+}
+
+/* *** MAIN *** */
+
+.main {
+  display: flex;
+  flex-flow: column;
+  padding-bottom: 120px;
+}
+
+.main-bg {
+  background-color: #14132B;
+  display: flex;
+  flex-flow: column;
+}
+
+.main-bg-top {
+  padding-bottom: 30%;
+  margin-bottom: -10%;
+  position: relative;
+  background: url('../img/sections/main-bg/main-bg-top.svg') no-repeat 0 45%/100%;
+}
+
+.main-bg-top__pieces {
+  position: absolute;
+  top: -15%;
+  left: 10%;
+  width: 75%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.main-bg-bottom {
+  padding-bottom: 38%;
+  position: relative;
+  background: url('../img/sections/main-bg/main-bg-bottom.svg') no-repeat center/100%;
+}
+
+.main-bg-bottom__pieces {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 65%;
+  height: 70%;
+}
+
+/* *** ABOUT *** */
+
+.about {
+  padding-top: 150px;
+  padding-bottom: 245px;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+}
+
+.about__bg-img {
+  position: absolute;
+  z-index: 0;
+}
+
+.about__bg-img-armor {
+  top: -8vw;
+  right: 0;
+  width: 30vw;
+}
+
+.about__bg-img-helmet {
+  left: 0;
+  top: 30%;
+  width: 18vw;
+}
+
+.about__title {
+  padding: 0 60px;
+  font: 800 185px/110% 'Montserrat';
+  letter-spacing: 0.13em;
+  color: #14132B;
+  text-shadow: -1px 0 #3B3965, 0 1px #3B3965, 1px 0 #3B3965, 0 -1px #3B3965;
+  opacity: .4;
+  margin-bottom: 45px;
+}
+
+.about__inner {
+  max-width: 935px;
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about__descr {
+  font: 300 63px/163% 'Montserrat';
+  margin-bottom: 120px;
+  color: #fff;
+}
+
+.about__descr b {
+  font-weight: 600;
+}
+
+.about__gameplay {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  transition: opacity .3s;
+}
+
+.about__gameplay:hover {
+  opacity: .5;
+}
+
+.about__gameplay-img {
+  margin-right: 65px;
+}
+
+.about__gameplay-text {
+  font: 800 22px/200% 'Montserrat';
+  letter-spacing: .18em;
+  color: #fff;
+}
+
+/* *** CONTENTS *** */
+
+.contents {
+  display: flex;
+  font: 400 166px/150% 'Montserrat';
+  color: #fff;
+}
+
+.contents__item {
+  display: flex;
+  align-items: center;
+  margin-right: 60px;
+}
+
+.contents__item::after {
+  content: '';
+  display: inline-block;
+  width: 125px;
+  height: 125px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.contents__build::after {
+  background-image: url('../img/sections/contents/build-icon-xxl.svg');
+}
+
+.contents__fight::after {
+  background-image: url('../img/sections/contents/swords-icon-xxl.svg');
+}
+
+.contents__item::before {
+  content: attr(data-text);
+  display: inline-block;
+  margin-right: 80px;
+}
+
+/* *** GAME-DESCR *** */
+
+.game-descr {
+  max-width: 1090px;
+  width: 100%;
+  margin: 0 auto 0 100px;
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+.game-descr__item {
+  display: flex;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.game-descr__item:last-child {
+  margin-bottom: 0;
+}
+
+.game-descr__item:nth-child(even) {
+  flex-flow: row-reverse;
+}
+
+.game-descr__item-decor {
+  position: absolute;
+  right: -200px;
+  bottom: -200px;
+  width: 360px;
+  height: 390px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.game-descr__item-text {
+  padding: 100px 0 0 90px;
+  max-width: 475px;
+  min-height: 475px;
+  width: 100%;
+  position: relative;
+}
+
+.game-descr__item-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 475px;
+  border-radius: 50%;
+  background-color: rgba(43, 42, 73, .3);
+  filter: blur(40px);
+  z-index: 0;
+}
+
+.game-descr__item:nth-child(odd) .game-descr__item-text {
+  margin-right: 60px;
+}
+
+.game-descr__item:nth-child(even) .game-descr__item-text {
+  margin-left: auto;
+}
+
+.game-descr__item-title {
+  font: 500 18px/322% 'Montserrat';
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #F84444;
+  letter-spacing: 0.15em;
+  position: relative;
+}
+
+.game-descr__item-descr {
+  font: 500 29px/200% 'Montserrat';
+  color: #fff;
+  position: relative;
+}
+
+.game-descr__item-img-wrapper {
+  max-width: 535px;
+  width: 100%;
+}
+
+.game-descr__item-img {
+  width: 100%;
+}
+
+/* *** COMMUNITY DEV */
+
+.involvement {
+  padding-top: 100px;
+  max-width: 955px;
+  color: #fff;
+}
+
+.involvement__title {
+  font: 500 70px/140% 'Montserrat';
+  margin-bottom: 95px;
+  text-align: center;
+}
+.involvement__list {  
+  font: 500 24px/195% 'Montserrat';
+}
+.involvement__item {
+  display: flex;
+  align-items: center;
+  padding: 40px 80px;
+  margin-bottom: 30px;
+  background-color: #1E1D37;
+  border-radius: 25px;
+}
+
+.involvement__item:last-child {
+  margin-bottom: 0;
+}
+
+.involvement__item-img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin-right: 65px;
+  font-size: 16px;
+}
+
+/* *** AFFECT *** */
+
+.affect__list {
+  display: flex;  
+  font: 500 27px/165% 'Montserrat';
+  text-align: center;
+}
+
+.affect__item {
+  margin-right: 40px;
+  padding: 68px 85px 85px;
+  border: 2px solid #E9EEF5;
+  border-radius: 41px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.affect__item:last-child {
+  margin-right: 0;
+}
+
+.affect__item-img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+}
+
+.affect__item-descr {
+  margin: 50px 0 25px;
+  color: #14132B;
+}
+
+.affect__item-info {
+  font-size: 18px;
+  line-height: 1;
+  opacity: .6;
+}
+
+/* *** ROADMAP *** */
+
+.roadmap {
+  margin-top: 135px;
+}
+
+.roadmap__list {
+  display: flex;
+  font: 500 21px/171% 'Montserrat';
+  color: #14132B;
+  counter-reset: rm;
+}
+
+.roadmap__item {
+  max-width: 200px;
+  width: 100%;
+  margin-right: 80px;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+}
+
+.roadmap__item::before {
+  counter-increment: rm;
+  content: 'Q'counter(rm);
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  height: 80px;
+  margin-bottom: 35px;
+  padding-top: 25px;
+  color: #fff;
+  font: 600 24px/1 'Montserrat';
+  background: url('../img/svg/roadmap-item-icon.svg') no-repeat center/contain;
+}
+
+.roadmap__item::after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 105px;
+  width: 75%;
+  display: block;
+  border: 2px dashed #D8D9ED;
+}
+
+.roadmap__item:last-child {
+  margin-right: 0;
+}
+
+.roadmap__item:last-child::after {
+  content: none;
+}
+
+/* *** FOOTER *** */
+
+.socials {
+  display: flex;  
+  font: 500 13px/100% 'Montserrat';
+  color: #fff;
+  margin-bottom: 55px;
+}
+
+.socials__item {
+  margin-right: 25px;
+  transition: opacity .2s;
+}
+
+.socials__item:last-child {
+  margin-right: 0;
+}
+
+.socials__item:hover {
+  opacity: .5;
+}
+
+.socials__item-link {  
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.socials__item-icon {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.socials__item-icon--discord {
+  background-color: #7343FB;
+}
+
+.socials__item-icon--telegram {
+  background-color: #0099FF;
+}
+
+.socials__item-icon--medium {
+  background-color: #fff;
+}
+
+.socials__item-icon-img {
+  object-fit: contain;
+}
+
+.footer {
+  background-color: #14132B;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 30px;
+  background: url('../img/sections/footer/footer-bg-top.svg') no-repeat top/cover;
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+
+.footer__inner {  
+  padding: 40px 0 35px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer__info {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.legal {
+  display: flex;
+  font: 600 12px/110% 'Montserrat';
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .5);
+}
+
+.legal__item {
+  margin-right: 20px;
+}
+
+.legal__item:last-child {
+  margin-right: 0;
+}
+
+.legal__item--license {
+  display: flex;
+}
+
+.legal__item--license::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.legal__item-link {
+  transition: color .2s;
+}
+
+.legal__item-link:hover {
+  color: #fff;
+}
+
+/* *** PLAYERS *** */
+
+.players {
+  padding-top: 270px;
+  padding-bottom: 120px;
+  overflow-x: hidden;
+}
+
+.players__top {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.players__top-img {
+  position: absolute;
+  top: -45%;
+  width: 500px;
+  z-index: -1;
+}
+
+.players__top-img-left {
+  left: -5%;
+}
+
+.players__top-img-right {
+  right: -7%;
+}
+
+.players__info {
+  max-width: 410px;
+  margin: 0 auto;
+}
+
+.players__title {
+  font: 800 23px/100% 'Montserrat';
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.players__count {
+  font: 800 150px/115% 'Montserrat';
+  text-align: center;
+  margin: 15px 0 40px;
+}
+
+.players__link {
+  margin: 0 auto;
+}
+
+.players__bottom {
+  margin-top: 135px;
+}
+
+.players-list {
+  display: flex;  
+  text-align: center;  
+  font: 600 21px/171% 'Montserrat';
+  margin-bottom: 20px;
+}
+
+.players-list:last-child {
+  opacity: .6;
+  margin-bottom: 0;
+}
+
+.players-item {
+  padding: 14px 35px 19px;
+  border-radius: 200px;
+  background-color: #F1F6FF;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+.players-item__name {
+  color: #7343FB;
+}
+
+.players-item__joined {
+  font-size: 14px;
+  line-height: 1;
+  color: #9CADCC;
+}
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

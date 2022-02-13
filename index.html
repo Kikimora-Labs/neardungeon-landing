@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script defer src="./assets/js/main.js"></script>
+    <title>Near dungeon</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="header__title">Near dungeon</h1>
+        <div class="header__top">
+          <div class="header__logo logo">
+            <a href="/" class="header__logo-link">
+              <img src="./assets/img/Logo-dark.svg" alt="Near dungeon" class="header__logo-img" />
+            </a>
+          </div>
+
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+              <li class="nav__item active"><a href="#features" class="nav__link">Features</a></li>
+              <li class="nav__item"><a href="#roadmap" class="nav__link">Roadmap</a></li>
+              <li class="nav__item"><a href="#footer" class="nav__link">Contact</a></li>
+            </ul>
+          </nav>
+
+          <a href="#" class="header__link play-link-prim">Play now</a>
+        </div>
+
+        <div class="header__bottom">
+          <div class="game-name">
+            <img src="./assets/img/sections/header/header-game-name.svg" alt="Near dungeon" class="game-name__img" />
+          </div>
+
+          <p class="header__descr">First fully on-chain game that can be everything you ever imagine</p>
+
+          <a href="#" class="play-link-v2 header__bottom-link">
+            <span class="play-link-v2__icon">
+              <i class="icon-swords"></i>
+            </span>
+            <span class="play-link-v2__text">Play now</span>
+          </a>
+        </div>
+      </div>
+
+      <img src="./assets/img/sections/header/header-cards/elemental.png" alt="elemental" id="game-card-1" class="header-card">
+      <img src="./assets/img/sections/header/header-cards/fire-mage.png" alt="fire-mage" id="game-card-2" class="header-card">
+      <img src="./assets/img/sections/header/header-cards/ice-shard.png" alt="ice-shard" id="game-card-3" class="header-card">
+      <img src="./assets/img/sections/header/header-cards/dragons-eye.png" alt="dragons-eye" id="game-card-4" class="header-card">
+    </header>
+
+    <main class="main">
+      <div class="main-bg-top">
+        <img src="./assets/img/sections/main-bg/main-bg-top-pieces.svg" alt="background" class="main-bg-top__pieces" />
+      </div>
+
+      <div class="main-bg">
+        <section id="about" class="about">
+          <h2 class="about__title">ABOUT</h2>
+          <div class="about__inner">
+            <p class="about__descr">
+              Dive into the worlds first <b>fully on chain</b> adventure where <b>community</b> truly decides everything
+            </p>
+
+            <a href="#" class="about__gameplay">
+              <img
+                src="./assets/img/sections/about/watch-gameplay.png"
+                alt="gameplay preview"
+                class="about__gameplay-img"
+                loading="lazy"
+              />
+              <p class="about__gameplay-text">WATCH<br />GAMEPLAY</p>
+            </a>
+          </div>
+          <img src="./assets/img/sections/about/about-bg-armor.png" alt="" class="about__bg-img about__bg-img-armor" />
+          <img src="./assets/img/sections/about/about-bg-helmet.png" alt="" class="about__bg-img about__bg-img-helmet" />
+        </section>
+
+        <section id="features" class="contents">
+          <p class="contents__item contents__build" data-text="Build"></p>
+          <p class="contents__item contents__fight" data-text="Fight"></p>
+          <p class="contents__item" data-text="Evolve"></p>
+        </section>
+
+        <div class="container">
+          <section class="game-descr">
+            <ul class="game-descr__list">
+              <li class="game-descr__item">
+                <div class="game-descr__item-text">
+                  <h3 class="game-descr__item-title">Build</h3>
+                  <p class="game-descr__item-descr">Build your own town<br />to gather resources and hire army</p>
+                </div>
+                <div class="game-descr__item-img-wrapper">
+                  <img
+                    src="./assets/img/sections/game-descr/game-descr-build.png"
+                    alt="build-card"
+                    class="game-descr__item-img"
+                    loading="lazy"
+                  />
+                </div>
+              </li>
+
+              <li class="game-descr__item">
+                <div class="game-descr__item-text">
+                  <h3 class="game-descr__item-title">FIGHT</h3>
+                  <p class="game-descr__item-descr">Hire heroes, send them<br />to the dungeons and get rewarded</p>
+                </div>
+                <div class="game-descr__item-img-wrapper">
+                  <img
+                    src="./assets/img/sections/game-descr/game-descr-fight.png"
+                    alt="build-card"
+                    class="game-descr__item-img"
+                    loading="lazy"
+                  />
+                </div>
+
+                <img
+                  src="./assets/img/sections/game-descr/game-descr-yellow-crystal.png"
+                  alt="decoration"
+                  class="game-descr__item-decor"
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="game-descr__item">
+                <div class="game-descr__item-text">
+                  <h3 class="game-descr__item-title">EVOLVE</h3>
+                  <p class="game-descr__item-descr">
+                    Level up heroes, find even rarer artifacts and capture nearby lands
+                  </p>
+                </div>
+                <div class="game-descr__item-img-wrapper">
+                  <img
+                    src="./assets/img/sections/game-descr/game-descr-evolve.png"
+                    alt="build-card"
+                    class="game-descr__item-img"
+                    loading="lazy"
+                  />
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <section class="involvement flex-column container">
+          <h2 class="involvement__title">Truly community driven development</h2>
+
+          <ul class="involvement__list">
+            <li class="involvement__item">
+              <img
+                src="./assets/img/sections/involvement/involvement-build-icon.svg"
+                alt="build"
+                class="involvement__item-img"
+                loading="lazy"
+              />
+              <p class="involvement__item-text">
+                Anybody can build a new quest, a new<br />item, or even a new building
+              </p>
+            </li>
+
+            <li class="involvement__item">
+              <img
+                src="./assets/img/sections/involvement/involvement-vote-icon.svg"
+                alt="vote"
+                class="involvement__item-img"
+                loading="lazy"
+              />
+              <p class="involvement__item-text">
+                Vote and choose the best development<br />ideas to deliver it into the game
+              </p>
+            </li>
+
+            <li class="involvement__item">
+              <img
+                src="./assets/img/sections/involvement/involvement-trade-icon.png"
+                alt="trade"
+                class="involvement__item-img"
+                loading="lazy"
+              />
+              <p class="involvement__item-text">Own everything that you get,<br />trade or sell it</p>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="main-bg-bottom">
+        <img src="./assets/img/sections/main-bg/main-bg-bottom-pieces.svg" alt="background" class="main-bg-bottom__pieces" />
+      </div>
+
+      <section class="affect flex-column sect">
+        <h2 class="sect__title">You own the game</h2>
+
+        <ul class="affect__list">
+          <li class="affect__item">
+            <img src="./assets/img/sections/affect/affect-1-img.svg" alt="affect image" class="affect__item-img" />
+            <p class="affect__item-descr">Choose not only the style, but an entire setting</p>
+            <p class="affect__item-info">Every move gets stored in blockchain</p>
+          </li>
+
+          <li class="affect__item">
+            <img src="./assets/img/sections/affect/affect-2-img.svg" alt="affect image" class="affect__item-img" />
+            <p class="affect__item-descr">Choose not only the style, but an entire setting</p>
+            <p class="affect__item-info">Every move gets stored in blockchain</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="roadmap" class="roadmap flex-column sect">
+        <h2 class="sect__title">Launch is only<br>the beginning</h2>
+
+        <ol class="roadmap__list">
+          <li class="roadmap__item">
+            <p class="roadmap__item-text">
+              Alpha launch.<br>IDO
+            </p>
+          </li>
+
+          <li class="roadmap__item">
+            <p class="roadmap__item-text">
+              Clans and guilds, GameJam for developers
+            </p>
+          </li>
+
+          <li class="roadmap__item">
+            <p class="roadmap__item-text">
+              Few big<br>updates
+            </p>
+          </li>
+
+          <li class="roadmap__item">
+            <p class="roadmap__item-text">
+              Mobile platforms launch
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="players">
+        <div class="players__top">
+          <img src="./assets/img/sections/players/human.png" alt="human" class="players__top-img players__top-img-left">
+
+          <div class="players__info">
+            <h2 class="players__title">Already playing</h2>
+            <p class="players__count">1,521</p>
+
+            <a href="#" class="play-link-v2 players__link">
+              <span class="play-link-v2__icon">
+                <i class="icon-swords"></i>
+              </span>
+              <span class="play-link-v2__text">Play now</span>
+            </a>
+          </div>
+
+          <img src="./assets/img/sections/players/skeleton.png" alt="skeleton" class="players__top-img players__top-img-right">
+        </div>
+
+        <div class="players__bottom">
+          <ul class="players-list">
+          </ul>
+          <ul class="players-list">
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__logo logo">
+            <a href="/" class="footer__logo-link">
+              <img src="./assets/img/Logo-light.svg" alt="logo" class="footer__logo-img" loading="lazy">
+            </a>
+          </div>
+
+          <div class="footer__info">
+            <ul class="socials">
+              <li class="socials__item">
+                <a href="" class="socials__item-link">
+                  <div class="socials__item-icon socials__item-icon--discord">
+                    <img src="./assets/img/socials/discord.svg" alt="Discord" class="socials__item-icon-img" loading="lazy">
+                  </div>
+                  Discord
+                </a>
+              </li>
+
+              <li class="socials__item">
+                <a href="" class="socials__item-link">
+                  <div class="socials__item-icon socials__item-icon--telegram">
+                    <img src="./assets/img/socials/telegram.svg" alt="Telegram" class="socials__item-icon-img" loading="lazy">
+                  </div>
+                  Telegram
+                </a>
+              </li>
+
+              <li class="socials__item">
+                <a href="" class="socials__item-link">
+                  <div class="socials__item-icon socials__item-icon--medium">
+                    <img src="./assets/img/socials/medium.svg" alt="Medium" class="socials__item-icon-img" loading="lazy">
+                  </div>
+                  Medium
+                </a>
+              </li>
+            </ul>           
+
+            <ul class="legal">
+              <li class="legal__item legal__item--license">
+                <p>© 2022 NEAR DUNGEON</p>
+              </li>
+
+              <li class="legal__item">
+                <a href="#" class="legal__item-link" target="_blank">PRIVACY POLICY</a>
+              </li>
+
+              <li class="legal__item">
+                <a href="#" class="legal__item-link" target="_blank">Terms of use</a>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#" class="footer__link play-link-prim">Play now</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
