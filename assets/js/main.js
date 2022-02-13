@@ -28,11 +28,12 @@ function headerParallax() {
 
   if (value <= headerPaddingBottom) {
     header.style.paddingBottom = (headerPaddingBottom - value) + 'px'
-    card1.style.transform = `translateY(-${(value / 10)}%)`
-    card2.style.transform = `translateY(-${(value / 5)}%)`
-    card3.style.transform = `translateY(-${(value / 20)}%)`
-    card4.style.transform = `translateY(-${(value / 15)}%)`
   }
+  
+  card1.style.transform = `translateY(-${(value / 10)}%)`
+  card2.style.transform = `translateY(-${(value / 5)}%)`
+  card3.style.transform = `translateY(-${(value / 20)}%)`
+  card4.style.transform = `translateY(-${(value / 15)}%)`
 }
 
 // move element from side to side on scroll (***for scroll event***)
