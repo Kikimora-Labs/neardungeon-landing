@@ -76,10 +76,10 @@ a {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1460px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 50px;
 }
 
 .sect {
@@ -449,6 +449,9 @@ a {
   display: flex;
   font: 400 166px/150% 'Montserrat';
   color: #fff;
+  justify-content: center;
+  will-change: transform;
+  animation: move50 30s linear infinite alternate-reverse;
 }
 
 .contents__item {
@@ -757,6 +760,9 @@ a {
 
 .players__bottom {
   margin-top: 135px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 .players-list {
@@ -766,9 +772,14 @@ a {
   margin-bottom: 20px;
 }
 
+.players-list:first-child {
+  animation: move20 20s linear infinite alternate;
+}
+
 .players-list:last-child {
   opacity: .6;
   margin-bottom: 0;
+  animation: move20 20s linear infinite alternate-reverse;
 }
 
 .players-item {
@@ -906,7 +917,23 @@ a {
   color: #fff;
 }
 
+@keyframes move20 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20%);
+  }
+}
 
+@keyframes move50 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
 
 @keyframes float {
   0% {
@@ -922,7 +949,39 @@ a {
   }
 }
 
-/* MOBILE */
+/* ADAPTIVE */
+
+@media screen and (max-width: 1200px) {
+  .about__inner {
+    max-width: 600px;
+  }
+
+  .about__descr {
+    font-size: 42px;
+  }
+
+  .game-descr__list {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .game-descr__item {
+    margin: 0 auto 80px;
+  }
+
+  .game-descr__item:nth-child(2n) .game-descr__item-text {
+    margin-left: 60px;
+  }
+
+  .game-descr__item-text {
+    margin: 0;
+    padding: 0;
+  }
+
+  .game-descr__item-img-wrapper {
+    max-width: 400px;
+  }
+}
 
 @media screen and (max-width: 900px) { 
   .logo {
@@ -955,7 +1014,7 @@ a {
   }
 
   .header {
-    padding-bottom: 90%;
+    padding-bottom: 120%;
   }
 
   .header__descr {
@@ -1032,6 +1091,7 @@ a {
 
   .contents__list {
     font-size: 55px;
+    position: relative;
   }
 
   .contents__item {
@@ -1055,11 +1115,15 @@ a {
 
   .game-descr__item {
     flex-flow: column;
-    margin: 0 0 100px;
+    margin: 0 auto 100px;
   }
 
   .game-descr__item:nth-child(2n) {
     flex-flow: column;
+  }
+
+  .game-descr__item:nth-child(2n) .game-descr__item-text {
+    margin-left: auto;
   }
 
   .game-descr__item-text {
@@ -1277,5 +1341,12 @@ a {
     content: '|';
     display: inline-block;
     margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
