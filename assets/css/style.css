@@ -960,6 +960,10 @@ a {
     font-size: 42px;
   }
 
+  .game-descr {
+    margin-left: 0;
+  }
+
   .game-descr__list {
     display: flex;
     flex-flow: column;
@@ -980,6 +984,10 @@ a {
 
   .game-descr__item-img-wrapper {
     max-width: 400px;
+  }
+
+  .players__top-img {
+    width: 370px;
   }
 }
 
@@ -1311,6 +1319,7 @@ a {
 
   .footer__info {
     order: 3;
+    width: 100%;
   }
 
   .legal {
