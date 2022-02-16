@@ -903,11 +903,11 @@ a {
   display: flex;
 }
 
-.legal__item--license::after {
+/* .legal__item--license::after {
   content: '|';
   display: inline-block;
   margin-left: 20px;
-}
+} */
 
 .legal__item-link {
   transition: color .2s;
@@ -1354,6 +1354,10 @@ a {
 }
 
 @media screen and (max-width: 600px) {
+  .header {
+    padding-bottom: 400px;
+  }
+
   .container {
     padding-left: 20px;
     padding-right: 20px;

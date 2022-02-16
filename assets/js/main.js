@@ -72,8 +72,44 @@ const card4  = document.querySelector('#game-card-4')
 
 const headerPaddingBottom = Number.parseFloat(window.getComputedStyle(header).paddingBottom)
 
+let playersCountStart = false
+const playersCount = document.querySelector('.players__count')
+let playersCountInt = +playersCount.textContent
+
+let totalPlayers = localStorage.getItem('pcn')
+
+if (totalPlayers) {
+  const data = JSON.parse(totalPlayers)
+  const prevDate = new Date(data.d)
+  const currDate = new Date()
+
+  let perDayCount = prevDate.getDate() === currDate.getDate() ? 0 : 111
+
+  console.log(prevDate.getDate() === currDate.getDate());
+
+  playersCountInt = +data.p !== 0 ? +data.p + perDayCount: +playersCount.textContent
+  playersCount.textContent = playersCountInt
+}
+
+window.onbeforeunload  = function() {
+  let data = {
+    d: new Date(),
+    p: playersCountInt,
+  }
+
+  localStorage.setItem('pcn', JSON.stringify(data))
+}
+
 window.addEventListener('scroll', e => {
   window.requestAnimationFrame(headerParallax)
+
+  if (!playersCountStart && isScrolledIntoView(playersCount)) {
+    playersCountStart = true
+    setInterval(() => {
+      playersCountInt += Math.round(Math.random() * 3)
+      playersCount.textContent = playersCountInt
+    }, 5000);
+  }
 })
 
 function headerParallax() {  
@@ -84,11 +120,23 @@ function headerParallax() {
   }
 
   if (value <= headerPaddingBottom) {
-    header.style.paddingBottom = (headerPaddingBottom - value) + 'px'
+    header.style.paddingBottom = (headerPaddingBottom - value / 10) + 'px'
   }
   
   card1.style.transform = `translateY(-${(value / 10)}%)`
-  card2.style.transform = `translateY(-${(value / 5)}%)`
+  card2.style.transform = `translateY(-${((value - window.innerHeight / 2) / 20)}%)`
   card3.style.transform = `translateY(-${(value / 20)}%)`
   card4.style.transform = `translateY(-${(value / 15)}%)`
+}
+
+function isScrolledIntoView(el) {
+  // check for 0.1% visible
+  var percentVisible = 0.01;
+  var elemTop = el.getBoundingClientRect().top;
+  var elemBottom = el.getBoundingClientRect().bottom;
+  var elemHeight = el.getBoundingClientRect().height;
+  var overhang = elemHeight * (1 - percentVisible);
+
+  var isVisible = (elemTop >= -overhang) && (elemBottom <= window.innerHeight + overhang);
+  return isVisible;
 }
