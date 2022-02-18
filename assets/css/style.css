@@ -127,7 +127,7 @@ a {
 
 .play-link-prim:hover {
   color: #F84444;
-  background-color: transparent;  
+  background-color: transparent;
 }
 
 .play-link-v2 {
@@ -189,7 +189,7 @@ a {
 .play-link-v2__text {
   padding: 15px 25px;
   text-transform: uppercase;
-  font: 800 14px/1 'Montserrat';  
+  font: 800 14px/1 'Montserrat';
   letter-spacing: .1em;
   transition: transform .2s;
 }
@@ -229,7 +229,7 @@ a {
   width: 100%;
   margin: 40px auto 50px;
   font: 500 23px/174% 'Montserrat';
-  text-align: center;  
+  text-align: center;
 }
 
 .header__bottom-link {
@@ -258,6 +258,7 @@ a {
   position: absolute;
   will-change: bottom;
   z-index: 2;
+  max-width: 600px;
 }
 
 #game-card-1 {
@@ -584,7 +585,7 @@ a {
   text-align: center;
 }
 
-.involvement__list {  
+.involvement__list {
   font: 500 24px/195% 'Montserrat';
 }
 
@@ -617,12 +618,13 @@ a {
 /* *** AFFECT *** */
 
 .affect__list {
-  display: flex;  
+  display: flex;
   font: 500 27px/165% 'Montserrat';
   text-align: center;
 }
 
 .affect__item {
+  width: calc(50% - 20px);
   margin-right: 40px;
   padding: 68px 85px 85px;
   border: 2px solid #E9EEF5;
@@ -649,7 +651,7 @@ a {
 
 .affect__item-info {
   font-size: 18px;
-  line-height: 1;
+  line-height: 1.3;
   opacity: .6;
 }
 
@@ -766,8 +768,8 @@ a {
 }
 
 .players-list {
-  display: flex;  
-  text-align: center;  
+  display: flex;
+  text-align: center;
   font: 600 21px/171% 'Montserrat';
   margin-bottom: 20px;
 }
@@ -803,7 +805,7 @@ a {
 /* *** FOOTER *** */
 
 .socials {
-  display: flex;  
+  display: flex;
   font: 500 13px/100% 'Montserrat';
   color: #fff;
   margin-bottom: 55px;
@@ -822,7 +824,7 @@ a {
   opacity: .5;
 }
 
-.socials__item-link {  
+.socials__item-link {
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -870,7 +872,7 @@ a {
   left: 0;
 }
 
-.footer__inner {  
+.footer__inner {
   padding: 40px 0 35px;
   display: flex;
   align-items: flex-start;
@@ -951,6 +953,17 @@ a {
 
 /* ADAPTIVE */
 
+@media screen and (max-width: 1920px) {
+  .header {
+    padding-bottom: 600px;
+  }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .about__inner {
     max-width: 600px;
@@ -991,7 +1004,7 @@ a {
   }
 }
 
-@media screen and (max-width: 900px) { 
+@media screen and (max-width: 900px) {
   .logo {
     width: 115px;
     height: 35px;
@@ -1018,7 +1031,7 @@ a {
   .sect__title {
     text-align: center;
     font-size: 26px;
-    margin-bottom: 30px;  
+    margin-bottom: 30px;
   }
 
   .header {
@@ -1039,20 +1052,20 @@ a {
     left: -10%;
     width: 45%;
   }
-  
+
   #game-card-2 {
     bottom: -10%;
     left: 25%;
     width: 75%;
     z-index: 3;
   }
-  
+
   #game-card-3 {
     bottom: 15%;
     right: 5%;
     width: 35%;
   }
-  
+
   #game-card-4 {
     display: none;
   }
@@ -1078,7 +1091,7 @@ a {
   .about__gameplay {
     margin-top: 45px;
     flex-flow: row-reverse;
-    margin-left: auto;    
+    margin-left: auto;
   }
 
   .about__gameplay-img {
@@ -1187,6 +1200,7 @@ a {
   }
 
   .affect__item {
+    width: 100%;
     padding: 30px;
     margin: 0 0 20px;
   }

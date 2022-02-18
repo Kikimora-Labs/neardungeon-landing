@@ -62,7 +62,7 @@ function getLiHTML(playerName) {
 
 // elements for parallax
 const header = document.querySelector('.header')
-const contentsList = document.querySelector('.contents__list')  
+const contentsList = document.querySelector('.contents__list')
 
 // header cards
 const card1  = document.querySelector('#game-card-1')
@@ -112,7 +112,7 @@ window.addEventListener('scroll', e => {
   }
 })
 
-function headerParallax() {  
+function headerParallax() {
   const value = window.scrollY
 
   if (value > 2000) {
@@ -122,11 +122,11 @@ function headerParallax() {
   if (value <= headerPaddingBottom) {
     header.style.paddingBottom = (headerPaddingBottom - value / 10) + 'px'
   }
-  
-  card1.style.transform = `translateY(-${(value / 10)}%)`
+
+  card1.style.transform = `translateY(-${(value / 20)}%)`
   card2.style.transform = `translateY(-${((value - window.innerHeight / 2) / 20)}%)`
-  card3.style.transform = `translateY(-${(value / 20)}%)`
-  card4.style.transform = `translateY(-${(value / 15)}%)`
+  card3.style.transform = `translateY(-${(value / 30)}%)`
+  card4.style.transform = `translateY(-${(value / 25)}%)`
 }
 
 function isScrolledIntoView(el) {
